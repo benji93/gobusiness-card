@@ -1,13 +1,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Buffalo - Business Card</title>
+    <title>Ben Fell - Go Powered Business Card</title>
     <%= stylesheetTag("application.css") %>
+    <style>
+      a .menu__item--active  {
+        text-decoration: underline
+      }
+    </style>
     <meta name="csrf-param" content="authenticity_token" />
     <meta name="csrf-token" content="<%= authenticity_token %>" />
   </head>
   <body>
-
+    <%= partial("menu.html") %>
     <div class="container">
       <%= partial("flash.html") %>
       <%= yield %>
